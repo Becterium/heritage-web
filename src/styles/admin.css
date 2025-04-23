@@ -1,0 +1,251 @@
+/* 管理后台特定样式 */
+
+/* 管理面板卡片 */
+.admin-card {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.admin-card-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.admin-card-body {
+    padding: 20px;
+}
+
+/* 数据统计卡片 */
+.stat-card {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.stat-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.stat-card-value {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-card-title {
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.stat-card-trend {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.stat-card-trend.up {
+    color: var(--success-color);
+}
+
+.stat-card-trend.down {
+    color: var(--danger-color);
+}
+
+/* 管理表格 */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    background-color: #f9fafb;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table tr:hover {
+    background-color: #f9fafb;
+}
+
+/* 状态标签 */
+.status-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-active {
+    background-color: rgba(72, 187, 120, 0.1);
+    color: var(--success-color);
+}
+
+.status-pending {
+    background-color: rgba(237, 137, 54, 0.1);
+    color: var(--warning-color);
+}
+
+.status-inactive {
+    background-color: rgba(229, 62, 62, 0.1);
+    color: var(--danger-color);
+}
+
+/* 搜索过滤区域 */
+.filter-section {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.filter-form-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* 操作按钮组 */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* 表单样式 */
+.admin-form-item {
+    margin-bottom: 20px;
+}
+
+.admin-form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* 文件上传区域 */
+.upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--accent-color);
+}
+
+.upload-icon {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+.upload-text {
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+/* 图表容器 */
+.chart-container {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+/* 维护提醒卡片 */
+.maintenance-reminder {
+    background-color: #fff8e6;
+    border-left: 4px solid var(--warning-color);
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.maintenance-reminder-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.maintenance-reminder-title i {
+    margin-right: 8px;
+    color: var(--warning-color);
+}
+
+.maintenance-reminder-content {
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.maintenance-reminder-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .filter-form-item {
+        min-width: 100%;
+    }
+
+    .admin-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-card-header .el-button-group {
+        margin-top: 10px;
+    }
+}
